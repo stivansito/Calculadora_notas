@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Notas Bonita</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Calculadora de aprobado</p>
+        <h1>Tu Excel bonito para saber que te falta para aprobar.</h1>
+        <p class="hero-text">
+          Mete los criterios de cada asignatura, indica pesos, notas y reglas, y la app te dira
+          automaticamente si vas bien y que nota te conviene sacar en lo que queda.
+        </p>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-stat">
+          <span class="stat-label">Reglas que entiende</span>
+          <strong>Pesos, minimos y partes obligatorias</strong>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Guardado</span>
+          <strong>Automatico en tu navegador</strong>
+        </div>
+        <div class="hero-actions">
+          <button id="add-subject-button" class="primary-button" type="button">Nueva asignatura</button>
+          <button id="load-demo-button" class="secondary-button" type="button">Cargar demo</button>
+          <button id="export-button" class="secondary-button" type="button">Exportar</button>
+          <button id="import-button" class="secondary-button" type="button">Importar</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="overview" class="overview"></section>
+
+    <main id="subjects" class="subjects" aria-live="polite"></main>
+  </div>
+
+  <input id="import-file-input" type="file" accept="application/json" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
